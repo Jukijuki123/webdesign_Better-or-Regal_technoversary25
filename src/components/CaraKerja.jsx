@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Ganti path & nama file sesuai asetmu
-import step1Img from "../assets/img/checkbox.png";
+import step1Img from "../assets/img/checkBox.png";
 import step2Img from "../assets/img/mobileBox.png";
 import step3Img from "../assets/img/truckBox.png";
 import step4Img from "../assets/img/transaksi.png";
