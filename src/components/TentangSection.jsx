@@ -48,11 +48,11 @@ export default function TentangSection() {
   return (
     <section id="tentang" className="relative bg-[#084734] py-6">
       <div className="max-w-7xl mx-auto px-4 md:px-16 flex flex-col lg:flex-row items-center gap-8">
-        {/* Gambar */}
+
         <motion.div
           className="w-full lg:w-1/2 relative order-1 lg:order-2 flex justify-center"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >

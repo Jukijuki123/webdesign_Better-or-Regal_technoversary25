@@ -21,7 +21,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Scroll-spy using IntersectionObserver
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll('section[id]'));
     if (!sections.length) return;
@@ -79,6 +78,7 @@ export default function Navbar() {
             <a href="#edukasi" className="nav-link text-abu hover:text-primary-dark">Edukasi</a>
             <a href="#carakerja" className="nav-link text-abu hover:text-primary-dark">Cara Kerja</a>
             <a href="#trashcash" className="nav-link text-abu hover:text-primary-dark">TrashCash</a>
+            <a href="#komunitas" className="nav-link text-abu hover:text-primary-dark">Komunitas</a>
             <a href="#kontak" className="nav-link text-abu hover:text-primary-dark">Kontak</a>
           </nav>
 
@@ -120,6 +120,7 @@ export default function Navbar() {
           <a href="#edukasi" onClick={closeMobile} className="block nav-link py-2 text-abu">Edukasi</a>
           <a href="#carakerja" onClick={closeMobile} className="block nav-link py-2 text-abu">Cara Kerja</a>
           <a href="#trashcash" onClick={closeMobile} className="block nav-link py-2 text-abu">TrashCash</a>
+          <a href="#komunitas" onClick={closeMobile} className='block nav-link py-2 text-abu'>Komunitas</a>
           <a href="#kontak" onClick={closeMobile} className='block nav-link py-2 text-abu'>Kontak</a>
         </div>
       </div>

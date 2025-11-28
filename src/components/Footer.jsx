@@ -17,9 +17,9 @@ const Footer = () => {
   return (
     <footer className="bg-linear-to-b from-primary-dark via-primary-dark to-primary text-white py-10 px-6 md:px-12 lg:px-16">
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* TOP ROW */}
+
         <div className="grid gap-10 md:grid-cols-2">
-          {/* KIRI: Brand + Deskripsi + Social */}
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const Footer = () => {
               sumber manfaat melalui pengelolaan yang tepat.
             </p>
 
-            {/* Social icons row (dribbble, github, twitter, facebook) */}
+            {/* Social media icons */}
             <div className="flex items-center gap-3 pt-2">
               {[Dribbble, Github, Twitter, Facebook].map((Icon, i) => (
                 <motion.a
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* KANAN: 3 kolom (Telepon, Tentang, Sosial Media) */}
+          {/* Right */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,32 +62,35 @@ const Footer = () => {
             viewport={{ once: true }}
             className="grid gap-6 sm:grid-cols-3 text-sm md:text-base"
           >
-            {/* Nomor Telepon */}
             <div>
               <h3 className="font-semibold mb-2">Nomor Telepon</h3>
               <p className="text-gray-100 flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+62 82399631182</span>
+                <span>082399631182</span>
               </p>
             </div>
 
-            {/* Tentang Kami */}
             <div>
-              <h3 className="font-semibold mb-2">Tentang Kami</h3>
+              <h3 className="font-semibold mb-2">Navigasi</h3>
               <ul className="space-y-1 text-gray-100">
                 <li>
-                  <a href="#edukasi" className="hover:underline">
-                    Edukasi Sampah
+                  <a href="#tentang" className="hover:underline">
+                    Tentang Kami
                   </a>
                 </li>
                 <li>
-                  <a href="#carakerja" className="hover:underline">
-                    Kelola Sampah
+                  <a href="#edukasi" className="hover:underline">
+                    Edukasi
                   </a>
                 </li>
                 <li>
                   <a href="#trashcash" className="hover:underline">
                     Tukar Sampah
+                  </a>
+                </li>
+                <li>
+                  <a href="#komunitas" className="hover:underline">
+                    Komunitas
                   </a>
                 </li>
               </ul>
@@ -117,16 +120,14 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* GARIS PEMBATAS */}
+        {/* Garis pembatas */}
         <hr className="border-white/40" />
 
-        {/* BOTTOM ROW */}
         <div className="grid gap-8 md:grid-cols-3 items-start text-sm md:text-base">
           {/* Get the app */}
           <div className="space-y-3">
             <h3 className="font-semibold">Get the app</h3>
             <div className="flex flex-wrap gap-3">
-              {/* App Store */}
               <motion.a
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.97 }}
@@ -142,7 +143,6 @@ const Footer = () => {
                 </div>
               </motion.a>
 
-              {/* Google Play */}
               <motion.a
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.97 }}
@@ -160,16 +160,14 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Jam Operasional */}
           <div>
             <h3 className="font-semibold mb-2">Jam Operasional</h3>
             <p className="text-gray-100 flex items-center gap-2">
               <Clock className="w-4 h-4" />
-              <span>08.00 am – 16.00 pm</span>
+              <span>08.00 WIB- 16.00 WIB</span>
             </p>
           </div>
 
-          {/* Lokasi */}
           <div>
             <h3 className="font-semibold mb-2">Lokasi</h3>
             <p className="text-gray-100 flex items-start gap-2">

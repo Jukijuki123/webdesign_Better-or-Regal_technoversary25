@@ -8,11 +8,10 @@ import { Link } from 'react-router-dom';
 export default function HeroSection() {
   return (
     <section id="beranda" className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-8 mt-6 mb-16 px-5">
-      {/* gambar */}
       <motion.div
         className="w-full lg:w-1/2 order-1 lg:order-2"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1}}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
@@ -23,7 +22,6 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* Text */}
       <motion.div
         className="w-full lg:w-1/2 order-2 md:order-1"
         initial={{ opacity: 0, x: -50 }}

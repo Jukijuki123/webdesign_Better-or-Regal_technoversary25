@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { AnimatedNumber } from "./AnimatedNumber"; // sesuaikan path bila perlu
+import { AnimatedNumber } from "./AnimatedNumber";
 
 const stats = [
   { value: 67.29, label: "Sampah tidak terkelola", suffix: "%", decimals: 2 },
@@ -19,7 +19,7 @@ const StatsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="bg-primary shadow-md rounded-2xl lg:rounded-4xl p-6 md:p-10"
+          className="bg-primary-light shadow-md rounded-2xl lg:rounded-4xl p-6 md:p-10"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -29,20 +29,20 @@ const StatsSection = () => {
               >
                 {/* Angka + suffix */}
                 <div className="flex items-baseline justify-center gap-1 mb-2">
-                  <span className="text-3xl md:text-4xl font-extrabold text-primary-dark group-hover:text-white">
+                  <span className="text-3xl md:text-3xl font-extrabold text-primary-dark group-hover:text-hitam">
                     <AnimatedNumber
                       value={stat.value}
                       duration={5}
                       decimals={stat.decimals}
                     />
                   </span>
-                  <span className="text-2xl md:text-3xl font-semibold text-white">
+                  <span className="text-2xl md:text-3xl font-semibold text-hitam">
                     {stat.suffix}
                   </span>
                 </div>
 
                 {/* Label */}
-                <p className="text-sm md:text-base font-medium text-primary-dark group-hover:text-white">
+                <p className="text-sm md:text-base font-medium text-primary-dark group-hover:text-hitam">
                   {stat.label}
                 </p>
               </div>

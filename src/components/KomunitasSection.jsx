@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Leaf, ShoppingBasket, Clock } from "lucide-react";
 import figure from "../assets/img/figureKomunitas.png";
@@ -17,20 +18,19 @@ const CommunitySection = () => {
           <h2 className="text-4xl md:text-6xl text-white font-semibold mb-6">Komunitas <span className="text-primary-dark ">EARTHLINE</span></h2>
           <p className="text-primary-dark mb-4">Bergabunglah di ruang aman untuk berbagi dan belajar bersama tentang pengelolaan sampah. Di sini, kita saling mendukung demi lingkungan yang lebih bersih dan berkelanjutan.”</p>
           {/* BUTTON */}
-          <motion.a
-            href="/komunitas"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="mt-2 inline-flex items-center justify-center rounded-full bg-linear-to-r from-primary-dark to-secondary  px-6 py-2.5 text-sm md:text-base text-white font-semibold shadow-md group"
-          >
-            <span>Lihat Komunitas</span>
-            <motion.span
-              className="ml-2 flex items-center opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0"
-              transition={{ duration: 0.2 }}
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <Link
+              to="/komunitas"
+              className="inline-flex items-center justify-center px-8 py-2 bg-linear-to-r from-primary-dark to-secondary rounded-full text-base md:text-lg font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer shadow-md group"
             >
-              <ArrowRight className="w-4 h-4" />
-            </motion.span>
-          </motion.a>
+              <span>Lihat Komunitas</span>
+              <motion.span
+                className="ml-2 flex items-center opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </motion.span>
+            </Link>
+          </motion.div>
         </div>
 
         <div className="md:w-1/2">

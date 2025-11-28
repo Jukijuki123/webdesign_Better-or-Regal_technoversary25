@@ -61,12 +61,11 @@ const ContactSection = () => {
   return (
     <section
       id="kontak"
-      className="bg-gray-50 py-16 px-6 md:px-10 lg:px-20"
+      className="bg-gray-50 py-16 px-6 md:px-10 lg:px-20 min-h-screen"
     >
       <div className="max-w-6xl mx-auto">
         
 
-        {/* Form + Info */}
         <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)] items-start">
           {/* Form kiri */}
           <motion.div
@@ -84,7 +83,6 @@ const ContactSection = () => {
             </p>
 
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-              {/* Nama + Email */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -139,7 +137,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Subject */}
               <div>
                 <label
                   htmlFor="subject"
@@ -167,7 +164,6 @@ const ContactSection = () => {
                 )}
               </div>
 
-              {/* Message */}
               <div>
                 <label
                   htmlFor="message"
@@ -195,7 +191,6 @@ const ContactSection = () => {
                 )}
               </div>
 
-              {/* Status */}
               {status.message && (
                 <p
                   className={`text-xs md:text-sm mt-1 ${
@@ -208,41 +203,38 @@ const ContactSection = () => {
                 </p>
               )}
 
-              {/* Button */}
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl bg-primary-dark text-white text-sm md:text-base font-semibold hover:bg-primary transition mt-2"
+                className="inline-flex items-center justify-center px-8 py-2 bg-linear-to-r from-primary-dark to-secondary rounded-full text-base md:text-lg font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer mt-2"
               >
                 Send Message
               </button>
             </form>
           </motion.div>
 
-          {/* Kartu info kanan (pentagon hijau) */}
+
           <motion.aside
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative flex justify-center lg:justify-end"
           >
             <div className="bg-linear-to-br from-primary-dark to-primary text-white rounded-2xl p-6 md:p-8 shadow-xl max-w-sm w-full flex flex-col justify-between">
-              {/* Address */}
               <div className="space-y-5">
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Address</h3>
+                  <h3 className="text-lg font-semibold mb-1">Lokasi</h3>
                   <div className="flex items-start gap-3 text-sm">
                     <MapPin className="w-5 h-5 mt-1 text-lime-300" />
                     <p>Bank Sampah Persatuan Jakarta, DKI Jakarta, Indonesia</p>
                   </div>
                 </div>
 
-                {/* Contact */}
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Contact</h3>
+                  <h3 className="text-lg font-semibold mb-1">Kontak</h3>
                   <div className="flex items-start gap-3 text-sm mb-1">
                     <Phone className="w-5 h-5 mt-0.5 text-lime-300" />
-                    <p>+62 857-0739-3495</p>
+                    <p>082399631182</p>
                   </div>
                   <div className="flex items-start gap-3 text-sm">
                     <Mail className="w-5 h-5 mt-0.5 text-lime-300" />
@@ -250,20 +242,17 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                {/* Open time */}
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Open Time</h3>
+                  <h3 className="text-lg font-semibold mb-1">Jam Operasional</h3>
                   <div className="flex items-start gap-3 text-sm">
                     <Clock className="w-5 h-5 mt-0.5 text-lime-300" />
                     <p>
-                      Monday - Friday: 08:00 - 16:00 <br />
-                      Saturday - Sunday: Closed
+                      Senin - Minggu: 08:00 WIB - 16:00 WIB
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Socials */}
               <div className="mt-6">
                 <p className="text-sm font-medium mb-2">Stay Connected</p>
                 <div className="flex gap-3">

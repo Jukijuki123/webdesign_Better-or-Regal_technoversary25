@@ -54,7 +54,6 @@ export default function TrashcashPage() {
     harga: "",
   });
 
-  // generate jam 08:00 - 16:00
   const timeSlots = useMemo(() => {
     const slots = [];
     for (let h = 8; h <= 16; h++) {
@@ -64,7 +63,6 @@ export default function TrashcashPage() {
     return slots;
   }, []);
 
-  // pastikan tanggal minimal hari ini
   useEffect(() => {
     if (new Date(tanggal) < new Date(todayStr)) {
       setTanggal(todayStr);
@@ -116,11 +114,9 @@ export default function TrashcashPage() {
   };
 
   const handleBack = () => {
-    // Kalau pakai React Router, ganti dengan useNavigate()
     if (window.history.length > 1) {
       window.history.back();
     } else {
-      // fallback: arahkan ke beranda
       window.location.href = "/";
     }
   };
@@ -155,7 +151,7 @@ export default function TrashcashPage() {
 
       {/* Main Section */}
       <main className="flex items-center justify-start h-[calc(100vh-64px)] px-6 md:px-12 relative">
-        {/* Form Card */}
+
         <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm md:w-[400px] p-6 space-y-5 z-20">
           {/* Jenis Sampah */}
           <div>

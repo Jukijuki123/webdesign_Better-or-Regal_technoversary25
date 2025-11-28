@@ -59,7 +59,7 @@ const EducationSection = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]"
         >
-          {/* Card 1 – horizontal besar */}
+          {/* Card 1 – horizontal */}
           <motion.div
             variants={cardVariants}
             whileHover={{ y: -6, scale: 1.01 }}
@@ -71,7 +71,7 @@ const EducationSection = () => {
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
 
-            {/* overlay hover pakai group-hover */}
+            {/* overlay hover*/}
             <div
               className="pointer-events-none absolute inset-0 bg-[#EBDB5D] p-6 md:p-8 flex flex-col justify-start
                          translate-y-full opacity-0
@@ -99,7 +99,7 @@ const EducationSection = () => {
             </h3>
           </motion.div>
 
-          {/* Card 2 – vertikal kanan */}
+          {/* Card 2 – vertikall */}
           <motion.div
             variants={cardVariants}
             whileHover={{ y: -6, scale: 1.01 }}
@@ -136,7 +136,7 @@ const EducationSection = () => {
             </h3>
           </motion.div>
 
-          {/* Card 3 – horizontal bawah */}
+          {/* Card 3 – horizontal  */}
           <motion.div
             variants={cardVariants}
             whileHover={{ y: -6, scale: 1.01 }}

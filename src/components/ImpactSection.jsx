@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
-// Ganti path gambar berikut sesuai asetmu
 import eduPemilahanThumb from "../assets/img/eduPemilhanSampah.jpg";
 import eduCuanThumb from "../assets/img/eduSampahJadiCuan.jpg";
 import eduEksporThumb from "../assets/img/eduEksporSampah.jpg";
@@ -66,7 +65,7 @@ const ImpactSection = () => {
           Dampak <span className="text-lime-600">Pengolahan</span>
         </h2>
 
-        {/* Container scroll horizontal */}
+        {/* Container scroll */}
         <div className="max-w-5xl mx-auto px-4 overflow-x-auto scroll-smooth no-scrollbar">
           <div className="flex flex-nowrap justify-between gap-4 pb-4">
             {videos.map((video, index) => (
@@ -77,7 +76,6 @@ const ImpactSection = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                whileHover={{ y: -6, scale: 1.02 }}
                 className="bg-white p-4 w-72 relative rounded-2xl shrink-0 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <a

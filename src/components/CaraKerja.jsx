@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Ganti path & nama file sesuai asetmu
 import step1Img from "../assets/img/checkBox.png";
 import step2Img from "../assets/img/mobileBox.png";
 import step3Img from "../assets/img/truckBox.png";
@@ -61,7 +60,6 @@ const CaraKerjaSection = () => {
           transparan, dan berdampak positif bagi lingkungan.
         </motion.p>
 
-        {/* Grid langkah */}
         <div className="relative flex flex-col md:flex-row items-center justify-center gap-14 md:gap-8">
           {steps.map((step, index) => (
             <React.Fragment key={step.id}>
@@ -69,7 +67,7 @@ const CaraKerjaSection = () => {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 3 }}
+                transition={{ duration: 0.6, delay: index * 1.5 }}
                 viewport={{ once: true }}
                 className="relative flex flex-col items-center text-center md:w-1/4 z-10"
               >
@@ -93,7 +91,6 @@ const CaraKerjaSection = () => {
                 </p>
               </motion.div>
 
-              {/* Garis penghubung (bukan pada step terakhir) */}
               {index !== steps.length - 1 && (
                 <>
                   {/* Horizontal line (desktop) */}

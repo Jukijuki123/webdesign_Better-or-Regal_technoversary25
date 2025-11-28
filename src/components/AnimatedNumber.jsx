@@ -12,7 +12,6 @@ export function AnimatedNumber({
   const hasAnimated = useRef(false);
 
   const handleViewportEnter = () => {
-    // Biar nggak animasi berkali-kali
     if (hasAnimated.current) return;
     hasAnimated.current = true;
 

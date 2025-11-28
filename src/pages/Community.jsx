@@ -3,13 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
-// import Footer yang sudah kamu buat sebelumnya
 import Footer from "../components/Footer";
 
 // ganti path gambar sesuai asetmu
 import komunitas1Img from "../assets/img/horizontal1.jpg";
 import komunitas2Img from "../assets/img/horizontal2.jpg";
-// kalau mau tambah card lagi, tinggal import & tambahkan di array
 
 const communities = [
   {
@@ -18,7 +16,7 @@ const communities = [
     description:
       "Komunitas seru tempat kita belajar cara nyulap sampah jadi cuan. Di sini, yang dibuang bukan cuma mantan—tapi juga sampah yang bisa dijual lagi!",
     image: komunitas1Img,
-    link: "https://example.com/sampah-bernilai", // ganti link komunitas
+    link: "https://whatsapp.com/channel/0029Vb7C8jUJZg3xtfMcNB3Q",
   },
   {
     id: 2,
@@ -26,15 +24,15 @@ const communities = [
     description:
       "Tempat nongkrongnya para pejuang cuan dari sampah. Kita bareng-bareng belajar cara mindahin sampah dari tong ke dompet!",
     image: komunitas2Img,
-    link: "https://example.com/jago-jual", // ganti link komunitas
+    link: "https://whatsapp.com/channel/0029Vb7C8jUJZg3xtfMcNB3Q",
   },
   {
     id: 3,
-    title: "Jago Jual Sampah",
+    title: "Tunas Hijau",
     description:
       "Tempat nongkrongnya para pejuang cuan dari sampah. Kita bareng-bareng belajar cara mindahin sampah dari tong ke dompet!",
-    image: komunitas2Img,
-    link: "https://example.com/jago-jual", // ganti link komunitas
+    image: komunitas1Img,
+    link: "https://whatsapp.com/channel/0029VaNguYp545v5B9P5880Y",
   },
   {
     id: 4,
@@ -42,7 +40,7 @@ const communities = [
     description:
       "Tempat nongkrongnya para pejuang cuan dari sampah. Kita bareng-bareng belajar cara mindahin sampah dari tong ke dompet!",
     image: komunitas2Img,
-    link: "https://example.com/jago-jual", // ganti link komunitas
+    link: "https://whatsapp.com/channel/0029VaNguYp545v5B9P5880Y",
   },
 
 ];
@@ -57,14 +55,13 @@ const CommunityPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#06551B]">
-      {/* SECTION ATAS: header + cards */}
+    <div className="min-h-screen flex flex-col bg-primary-dark">
       <main className="flex-1">
-        <section className="px-4 sm:px-6 md:px-10 lg:px-16 pt-4 pb-16 text-white">
+        <section className="px-4 sm:px-6 md:px-10 lg:px-16 pt-4 pb-20 text-white">
           {/* Tombol back */}
           <button
             onClick={handleBack}
-            className="inline-flex items-center gap-2 text-white/90 hover:text-white mb-6"
+            className="inline-flex items-center gap-2 text-white cursor-pointer mb-6"
             aria-label="Kembali"
           >
             <ArrowLeft className="w-6 h-6" />
@@ -73,15 +70,6 @@ const CommunityPage = () => {
 
           {/* Header text */}
           <div className="text-center max-w-3xl mx-auto">
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-              className="text-lg md:text-xl font-semibold"
-            >
-              Selamat datang!
-            </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -106,20 +94,19 @@ const CommunityPage = () => {
 
           {/* Cards: horizontal scroll */}
           <div className="mt-10">
-            <div className="overflow-x-auto pb-4">
-              <div className="flex gap-6 md:gap-8 min-w-max">
+            <div className="overflow-x-auto scroll-smooth no-scrollbar pb-4">
+              <div className="flex flex-nowrap justify-betwee gap-6 md:gap-8 min-w-max">
                 {communities.map((community, index) => (
                   <motion.div
                     key={community.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0}}
+                    whileInView={{ opacity: 1}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    whileHover={{ y: -6, scale: 1.02 }}
-                    className="bg-white rounded-3xl shadow-lg w-[280px] sm:w-[320px] md:w-[360px] shrink-0 overflow-hidden"
+                    className="bg-white rounded-3xl shadow-lg w-[360px] sm:w-[420px] md:w-[500px] shrink-0 overflow-hidden"
                   >
                     {/* gambar */}
-                    <div className="h-40 md:h-44 overflow-hidden">
+                    <div className="h-52 md:h-64 overflow-hidden rounded-b-full">
                       <img
                         src={community.image}
                         alt={community.title}
@@ -127,7 +114,6 @@ const CommunityPage = () => {
                       />
                     </div>
 
-                    {/* isi card */}
                     <div className="px-5 py-5 flex flex-col gap-3">
                       <h2 className="text-lg md:text-xl font-extrabold text-emerald-800 text-center">
                         {community.title}
@@ -143,7 +129,7 @@ const CommunityPage = () => {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.03 }}
                           whileTap={{ scale: 0.97 }}
-                          className="inline-flex items-center justify-center min-w-[130px] rounded-full bg-[#3E7F35] text-white text-sm font-semibold px-6 py-2 shadow-md hover:bg-[#356d2d] transition"
+                          className="inline-flex items-center justify-center min-w-[130px] bg-linear-to-r from-primary-dark to-secondary rounded-full text-base md:text-lg font-semibold text-white hover:scale-105 px-8 py-2 shadow-md transition"
                         >
                           Gabung
                         </motion.a>
@@ -157,7 +143,6 @@ const CommunityPage = () => {
         </section>
       </main>
 
-      {/* FOOTER DI BAWAH */}
       <Footer />
     </div>
   );

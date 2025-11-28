@@ -52,7 +52,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="w-full max-w-screen h-full px-6 sm:px-10 md:px-24 py-10 md:pb-20">
+    <section id="faq" className="w-full max-w-screen h-full px-6 sm:px-10 md:px-24 py-20 md:pb-20">
       <motion.h2
         className="font-bold text-center mb-8 text-3xl md:text-5xl text-primary-dark"
         initial={{ opacity: 0, y: -40 }}
