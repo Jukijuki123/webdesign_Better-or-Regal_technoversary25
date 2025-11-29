@@ -5,7 +5,7 @@ import { motion, useInView, animate } from "motion/react";
 
 function AnimatedNumber({ value, suffix = "", duration = 1.5, decimals = 0 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // mulai animasi saat kelihatan
+  const isInView = useInView(ref, { once: true }); 
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {

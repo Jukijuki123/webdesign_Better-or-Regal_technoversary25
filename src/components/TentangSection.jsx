@@ -6,31 +6,6 @@ import { PiggyBank, BookOpen, Leaf, Smartphone } from "lucide-react";
 import imgTentang from "../assets/img/imgTentang.png";
 
 
-function AnimatedNumber({ value, suffix = "", duration = 1.5, decimals = 0 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); 
-  const [displayValue, setDisplayValue] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    const controls = animate(0, value, {
-      duration,
-      onUpdate(latest) {
-        setDisplayValue(latest);
-      },
-    });
-
-    return () => controls.stop();
-  }, [value, duration, isInView]);
-
-  return (
-    <span ref={ref}>
-      {displayValue.toFixed(decimals)}
-      {suffix}
-    </span>
-  );
-}
 
 export default function TentangSection() {
 

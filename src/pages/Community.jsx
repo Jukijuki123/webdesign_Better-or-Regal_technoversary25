@@ -5,7 +5,6 @@ import { ArrowLeft } from "lucide-react";
 
 import Footer from "../components/Footer";
 
-// ganti path gambar sesuai asetmu
 import komunitas1Img from "../assets/img/horizontal1.jpg";
 import komunitas2Img from "../assets/img/horizontal2.jpg";
 

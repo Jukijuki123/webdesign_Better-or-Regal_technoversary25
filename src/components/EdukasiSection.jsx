@@ -93,7 +93,6 @@ const EducationSection = () => {
               />
             </div>
 
-            {/* title default */}
             <h3 className="absolute bottom-5 left-5 text-2xl font-bold text-white drop-shadow group-hover:opacity-0 transition-opacity duration-300">
               Manfaatkan Sampah
             </h3>

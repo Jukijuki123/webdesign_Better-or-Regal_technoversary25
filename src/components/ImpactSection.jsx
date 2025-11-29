@@ -71,7 +71,6 @@ const ImpactSection = () => {
                   rel="noopener noreferrer"
                   className="block relative"
                 >
-                  {/* Thumbnail */}
                   <div className="rounded-xl overflow-hidden mb-4">
                     <img
                       src={video.thumbnail}
@@ -94,7 +93,6 @@ const ImpactSection = () => {
                     <Play className="w-6 h-6 text-white ml-0.5" />
                   </motion.button>
 
-                  {/* Text utama */}
                   <div className="mb-6 mt-2">
                     <h3 className="text-lg md:text-xl mb-1 font-semibold text-gray-900 hover:underline">
                       {video.title}
@@ -105,7 +103,6 @@ const ImpactSection = () => {
                   </div>
                 </a>
 
-                {/* Info channel */}
                 <div className="flex flex-row gap-4 items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden">
                     <img

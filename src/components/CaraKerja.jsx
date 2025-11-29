@@ -60,9 +60,7 @@ const CaraKerjaSection = () => {
           transparan, dan berdampak positif bagi lingkungan.
         </motion.p>
 
-        {/* Wrapper besar */}
         <div className="relative">
-          {/* Garis horizontal di belakang icon (desktop) */}
           <div className="hidden lg:block absolute top-[74px] left-0 right-0 h-[3px] bg-linear-to-r from-green-500 to-orange-400 rounded-full z-0" />
 
           {/* Grid step */}
@@ -91,18 +89,16 @@ const CaraKerjaSection = () => {
                     </div>
                   </div>
 
-                  {/* Judul – tinggi diseragamkan */}
                   <h3 className="text-lg font-semibold text-primary-dark mb-3 min-h-[60px] flex items-center justify-center">
                     {step.title}
                   </h3>
 
-                  {/* Deskripsi – tinggi diseragamkan */}
                   <p className="text-sm text-gray-600 leading-relaxed max-w-[260px] min-h-[150px]">
                     {step.desc}
                   </p>
                 </motion.div>
 
-                {/* Garis vertikal di antara step (hanya mobile) */}
+                {/* Garis vertikal (mobile) */}
                 {index !== steps.length - 1 && (
                   <div className="md:hidden flex justify-center">
                     <div className="w-[3px] h-12 bg-linear-to-b from-green-500 to-orange-400 rounded-full -mt-4 mb-4" />

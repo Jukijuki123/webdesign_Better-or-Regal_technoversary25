@@ -124,7 +124,7 @@ const Footer = () => {
         <hr className="border-white/40" />
 
         <div className="grid gap-8 md:grid-cols-3 items-start text-sm md:text-base">
-          {/* Get the app */}
+
           <div className="space-y-3">
             <h3 className="font-semibold">Get the app</h3>
             <div className="flex flex-wrap gap-3">
