@@ -15,16 +15,13 @@ Webiste ini (EarthLine) dibuat untuk mempermudah masyarakat dalam mengelola samp
 ##  Cara Instalasi & Menjalankan
 1. Clone repository:
 
-   git clone https://github.com/Jukijuki123/webdesign_Better-or-Regal_technoversary25.git
+   "git clone https://github.com/Jukijuki123/webdesign_Better-or-Regal_technoversary25.git"
 
 2. masuk ke folder project
-
-    cd earthline
+    "cd earthline"
 
 3. install despendecies
-
-    npm install
+    "npm install"
 
 4. jalankan project
-
-    npm run dev
+    "npm run dev"
