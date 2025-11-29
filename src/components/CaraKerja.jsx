@@ -71,7 +71,7 @@ const CaraKerjaSection = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 1.5 }}
+                  transition={{ duration: 0.6, delay: index * 1 }}
                   viewport={{ once: true }}
                   className="flex flex-col items-center text-center h-full z-10"
                 >

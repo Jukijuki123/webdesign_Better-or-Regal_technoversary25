@@ -10,8 +10,7 @@
 EARTHLINE – Platform Edukasi dan Pengelolaan Sampah Digital
 
 ##  Deskripsi
-Website ini membantu masyarakat dalam mengelola sampah secara efektif, 
-bertanggung jawab, dan berkelanjutan dengan sistem daur ulang berbasis digital.
+Webiste ini (EarthLine) dibuat untuk mempermudah masyarakat dalam mengelola sampah secara efektif dan bertanggung jawab serta mengubah sampah menjadi sumber manfaat melalui pengelolaan yang tepat.
 
 ##  Cara Instalasi & Menjalankan
 1. Clone repository:
