@@ -35,9 +35,24 @@
       height: 0;
     }
     .no-scrollbar {
-      -ms-overflow-style: none;  /* IE dan Edge */
+      -ms-overflow-style: none;  
       scrollbar-width: none;
     }
+
+  @keyframes marquee-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* kelas custom untuk track */
+  .marquee {
+    width: max-content;
+    animation: marquee-slide 20s linear infinite;
+  }
 
 
 

@@ -7,14 +7,15 @@
 - Raya Tsania
 
 ##  Judul Website
-EARTHLINE – Platform Edukasi dan Pengelolaan Sampah Digital
+EARTHLINE
 
 ##  Deskripsi
 Webiste ini (EarthLine) dibuat untuk mempermudah masyarakat dalam mengelola sampah secara efektif dan bertanggung jawab serta mengubah sampah menjadi sumber manfaat melalui pengelolaan yang tepat.
 
+Teknologi yang digunakan: ReactJS, TailwindCSS
+
 ##  Cara Instalasi & Menjalankan
 1. Clone repository:
-
    "git clone https://github.com/Jukijuki123/webdesign_Better-or-Regal_technoversary25.git"
 
 2. masuk ke folder project

@@ -15,6 +15,8 @@ import TrashCashSection from '../components/TrashCashSection';
 import ContactSection from '../components/Kontak';
 import CaraKerja from '../components/CaraKerja';
 import Footer from '../components/Footer';
+import Chatbot from '../components/Chatbot';
+import RunningWords from '../components/RunningWords';
 
 
 const Home = () => {
@@ -23,8 +25,8 @@ const Home = () => {
     <>
     <Navbar />
         <main className="pt-16 scroll-smooth">
-
-            <HeroSection /> 
+            <HeroSection />
+            <Chatbot />
             <div className="overflow-hidden -mb-6">
                 <img src={imgGelombang} alt="Gelombang" className="w-full" />
             </div>
@@ -34,6 +36,7 @@ const Home = () => {
             <EducationSection />
             <ImpactSection />
             <ProdukKerajinan />
+            <RunningWords />
             <CaraKerja />
             <TrashCashSection />
             <TestimoniSection />
