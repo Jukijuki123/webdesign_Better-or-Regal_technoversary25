@@ -122,9 +122,9 @@ export default function TrashcashPage() {
   };
 
   return (
-    <div className="bg-linear-to-br from-green-50 to-emerald-50 min-h-screen font-['Poppins']">
+    <div className="bg-linear-to-br from-green-50 to-emerald-50 min-h-screen font-['Poppins'] relative">
       {/* Header */}
-      <header className="bg-linear-to-r from-primary-dark to-primary text-white shadow-lg">
+      <header className="bg-primary-dark text-white shadow-lg z-20 relative">
         <div className="mx-auto px-4 py-4 flex items-center">
           <button
             onClick={handleBack}
@@ -149,11 +149,9 @@ export default function TrashcashPage() {
         </div>
       </header>
 
-      {/* Main Section */}
-      <main className="flex items-center justify-start h-[calc(100vh-64px)] px-6 md:px-12 relative">
+      <main className="flex items-center justify-start h-[calc(100vh-64px)] px-6 md:px-12">
 
         <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm md:w-[400px] p-6 space-y-5 z-20">
-          {/* Jenis Sampah */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Jenis Sampah
@@ -172,7 +170,6 @@ export default function TrashcashPage() {
             </select>
           </div>
 
-          {/* Jumlah Sampah */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Jumlah Sampah
@@ -203,7 +200,6 @@ export default function TrashcashPage() {
             <p className="text-xs text-gray-500 text-right mt-1">kg</p>
           </div>
 
-          {/* Lokasi */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Lokasi
@@ -222,7 +218,6 @@ export default function TrashcashPage() {
             </select>
           </div>
 
-          {/* Jadwal */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Jadwal Pengambilan
@@ -256,18 +251,16 @@ export default function TrashcashPage() {
             </div>
           </div>
 
-          {/* Tombol Jual */}
           <button
             type="button"
             onClick={handleSubmit}
-            className="w-full px-8 py-2 bg-linear-to-r from-primary-dark to-primary rounded-xl text-xl font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer"
+            className="w-full px-8 py-2 bg-linear-to-r from-primary-dark to-secondary rounded-xl text-xl font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer"
           >
             Jual
           </button>
         </div>
 
-        {/* Gambar Absolute */}
-        <div className="absolute bottom-0 right-0 -z-10 opacity-90 pointer-events-none">
+        <div className="absolute bottom-0 right-0 z-0 pointer-events-none">
           <img
             src={bgTukarSampah}
             alt="Ilustrasi Tukar Sampah"
@@ -276,7 +269,7 @@ export default function TrashcashPage() {
         </div>
       </main>
 
-      {/* POPUP SUKSES */}
+      {/* Popup sukses */}
       <div
         className={`fixed inset-0 bg-black/50 ${
           popupOpen ? "flex" : "hidden"
@@ -287,7 +280,7 @@ export default function TrashcashPage() {
           className="bg-white rounded-2xl shadow-2xl w-full max-w-md flex flex-col max-h-[90vh] overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Header */}
+
           <div className="bg-primary-dark text-white p-6 text-center sticky top-0 z-10 rounded-t-2xl">
             <h2 className="text-xl font-bold">Penukaran Berhasil</h2>
             <p className="text-sm mt-1 opacity-90">
@@ -298,7 +291,6 @@ export default function TrashcashPage() {
             </p>
           </div>
 
-          {/* Konten Scroll */}
           <div className="flex-1 overflow-y-auto p-6 space-y-5 bg-gray-50">
             {/* QR */}
             <div className="flex justify-center">
@@ -339,7 +331,7 @@ export default function TrashcashPage() {
                 </div>
                 <div className="flex justify-between border-t pt-3 mt-3">
                   <span className="font-semibold">Harga</span>
-                  <span className="font-bold text-primary text-lg">
+                  <span className="font-bold text-primary-dark text-lg">
                     {detail.harga}
                   </span>
                 </div>
@@ -347,7 +339,6 @@ export default function TrashcashPage() {
             </div>
           </div>
 
-          {/* Tombol Popup */}
           <div className="p-4 bg-gray-50 sticky bottom-0 flex gap-3 rounded-b-2xl">
             <button
               type="button"

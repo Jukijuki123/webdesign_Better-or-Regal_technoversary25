@@ -68,18 +68,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2" onClick={closeMobile}>
-            <img src={logo} alt="EarthLine" className="w-8 h-8" />
-            <span className="text-2xl text-primary-dark font-bold">EarthLine</span>
+            <img src={logo} alt="Logo" className="w-8 h-8" />
+            <span className="text-2xl text-primary-dark font-bold">EARTHLINE</span>
           </a>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex md:items-center md:space-x-8">
-            <a href="#tentang" className="nav-link text-abu hover:text-primary-dark">Tentang Kami</a>
-            <a href="#edukasi" className="nav-link text-abu hover:text-primary-dark">Edukasi</a>
-            <a href="#carakerja" className="nav-link text-abu hover:text-primary-dark">Cara Kerja</a>
-            <a href="#trashcash" className="nav-link text-abu hover:text-primary-dark">TrashCash</a>
-            <a href="#komunitas" className="nav-link text-abu hover:text-primary-dark">Komunitas</a>
-            <a href="#kontak" className="nav-link text-abu hover:text-primary-dark">Kontak</a>
+            <a href="#tentang" className="nav-link text-hitam hover:text-primary-dark">Tentang Kami</a>
+            <a href="#edukasi" className="nav-link text-hitam hover:text-primary-dark">Edukasi</a>
+            <a href="#carakerja" className="nav-link text-hitam hover:text-primary-dark">Cara Kerja</a>
+            <a href="#trashcash" className="nav-link text-hitam hover:text-primary-dark">TrashCash</a>
+            <a href="#komunitas" className="nav-link text-hitam hover:text-primary-dark">Komunitas</a>
+            <a href="#kontak" className="nav-link text-hitam hover:text-primary-dark">Kontak</a>
           </nav>
 
           {/* Tombol Humburger */}
@@ -116,12 +116,12 @@ export default function Navbar() {
             scrolled ? 'bg-primary-light shadow-md' : 'bg-white'
           }`}
         >
-          <a href="#tentang" onClick={closeMobile} className="block nav-link py-2 text-abu">Tentang Kami</a>
-          <a href="#edukasi" onClick={closeMobile} className="block nav-link py-2 text-abu">Edukasi</a>
-          <a href="#carakerja" onClick={closeMobile} className="block nav-link py-2 text-abu">Cara Kerja</a>
-          <a href="#trashcash" onClick={closeMobile} className="block nav-link py-2 text-abu">TrashCash</a>
-          <a href="#komunitas" onClick={closeMobile} className='block nav-link py-2 text-abu'>Komunitas</a>
-          <a href="#kontak" onClick={closeMobile} className='block nav-link py-2 text-abu'>Kontak</a>
+          <a href="#tentang" onClick={closeMobile} className="block nav-link py-2 text-hitam">Tentang Kami</a>
+          <a href="#edukasi" onClick={closeMobile} className="block nav-link py-2 text-hitam">Edukasi</a>
+          <a href="#carakerja" onClick={closeMobile} className="block nav-link py-2 text-hitam">Cara Kerja</a>
+          <a href="#trashcash" onClick={closeMobile} className="block nav-link py-2 text-hitam">TrashCash</a>
+          <a href="#komunitas" onClick={closeMobile} className='block nav-link py-2 text-hitam'>Komunitas</a>
+          <a href="#kontak" onClick={closeMobile} className='block nav-link py-2 text-hitam'>Kontak</a>
         </div>
       </div>
     </header>

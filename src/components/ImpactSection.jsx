@@ -52,7 +52,7 @@ const cardVariants = {
   visible: (index) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: index * 0.1, ease: "easeOut" },
+    transition: { duration: 0.5, delay: index * 0.3, ease: "easeOut" },
   }),
 };
 

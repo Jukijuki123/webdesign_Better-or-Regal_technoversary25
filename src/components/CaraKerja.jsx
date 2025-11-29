@@ -60,48 +60,57 @@ const CaraKerjaSection = () => {
           transparan, dan berdampak positif bagi lingkungan.
         </motion.p>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-14 md:gap-8">
-          {steps.map((step, index) => (
-            <React.Fragment key={step.id}>
-              {/* Step */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 1.5 }}
-                viewport={{ once: true }}
-                className="relative flex flex-col items-center text-center md:w-1/4 z-10"
-              >
-                {/* Gambar */}
-                <div className="relative w-24 h-24 md:w-28 md:h-28 flex items-center justify-center bg-primary-light rounded-2xl shadow-sm mb-6">
-                  <img
-                    src={step.img}
-                    alt={step.title}
-                    className="w-20 h-20 object-contain"
-                  />
-                </div>
+        {/* Wrapper besar */}
+        <div className="relative">
+          {/* Garis horizontal di belakang icon (desktop) */}
+          <div className="hidden lg:block absolute top-[74px] left-0 right-0 h-[3px] bg-linear-to-r from-green-500 to-orange-400 rounded-full z-0" />
 
-                {/* Judul */}
-                <h3 className="text-lg font-semibold text-primary-dark mb-3">
-                  {step.title}
-                </h3>
+          {/* Grid step */}
+          <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 items-stretch">
+            {steps.map((step, index) => (
+              <React.Fragment key={step.id}>
+                {/* Card step */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 1.5 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center text-center h-full z-10"
+                >
+                  {/* Gambar */}
+                  <div className="relative w-24 h-24 md:w-28 md:h-28 flex items-center justify-center bg-primary-light rounded-2xl shadow-sm mb-6">
+                    <img
+                      src={step.img}
+                      alt={step.title}
+                      className="w-20 h-20 object-contain"
+                    />
+                    <div className="w-10 h-10 text-center items-center rounded-full bg-primary-dark  absolute -top-4 -left-4">
+                      <h3 className="text-2xl font-semibold text-white p-1">
+                        {step.id}
+                      </h3>
+                    </div>
+                  </div>
 
-                {/* Deskripsi */}
-                <p className="text-sm text-gray-600 leading-relaxed max-w-[260px]">
-                  {step.desc}
-                </p>
-              </motion.div>
+                  {/* Judul – tinggi diseragamkan */}
+                  <h3 className="text-lg font-semibold text-primary-dark mb-3 min-h-[60px] flex items-center justify-center">
+                    {step.title}
+                  </h3>
 
-              {index !== steps.length - 1 && (
-                <>
-                  {/* Horizontal line (desktop) */}
-                  <div className="hidden md:block absolute top-[70px] left-0 right-0 h-[3px] bg-linear-to-r from-green-500 to-orange-400 rounded-full z-0" />
+                  {/* Deskripsi – tinggi diseragamkan */}
+                  <p className="text-sm text-gray-600 leading-relaxed max-w-[260px] min-h-[150px]">
+                    {step.desc}
+                  </p>
+                </motion.div>
 
-                  {/* Vertical line (mobile) */}
-                  <div className="md:hidden w-[3px] h-12 bg-linear-to-b from-green-500 to-orange-400 rounded-full -mt-6 mb-4"></div>
-                </>
-              )}
-            </React.Fragment>
-          ))}
+                {/* Garis vertikal di antara step (hanya mobile) */}
+                {index !== steps.length - 1 && (
+                  <div className="md:hidden flex justify-center">
+                    <div className="w-[3px] h-12 bg-linear-to-b from-green-500 to-orange-400 rounded-full -mt-4 mb-4" />
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </section>

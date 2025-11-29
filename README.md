@@ -14,7 +14,7 @@ bertanggung jawab, dan berkelanjutan dengan sistem daur ulang berbasis digital.
 
 ##  Cara Instalasi & Menjalankan
 1. Clone repository:
-   ```bash
+
    git clone https://github.com/Jukijuki123/webdesign_Better-or-Regal_technoversary25.git
 
 2. masuk ke folder project

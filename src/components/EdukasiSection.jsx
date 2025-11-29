@@ -103,7 +103,7 @@ const EducationSection = () => {
           <motion.div
             variants={cardVariants}
             whileHover={{ y: -6, scale: 1.01 }}
-            className="relative row-span-2 rounded-2xl overflow-hidden group shadow-md cursor-pointer"
+            className="relative md:row-span-2 rounded-2xl overflow-hidden group shadow-md cursor-pointer"
           >
             <img
               src={verticalImg}

@@ -30,7 +30,6 @@ const Home = () => {
             <ImpactStats />
             <TentangSection />
             <SumberSampah />
-
             <EducationSection />
             <ImpactSection />
             <CaraKerja />

@@ -61,7 +61,7 @@ const CommunityPage = () => {
           {/* Tombol back */}
           <button
             onClick={handleBack}
-            className="inline-flex items-center gap-2 text-white cursor-pointer mb-6"
+            className="inline-flex items-center gap-2 text-white hover:text-secondary cursor-pointer mb-6"
             aria-label="Kembali"
           >
             <ArrowLeft className="w-6 h-6" />
@@ -92,7 +92,7 @@ const CommunityPage = () => {
             </motion.p>
           </div>
 
-          {/* Cards: horizontal scroll */}
+          {/* Cards */}
           <div className="mt-10">
             <div className="overflow-x-auto scroll-smooth no-scrollbar pb-4">
               <div className="flex flex-nowrap justify-betwee gap-6 md:gap-8 min-w-max">
@@ -115,10 +115,10 @@ const CommunityPage = () => {
                     </div>
 
                     <div className="px-5 py-5 flex flex-col gap-3">
-                      <h2 className="text-lg md:text-xl font-extrabold text-emerald-800 text-center">
+                      <h2 className="text-lg md:text-xl font-extrabold text-primary-dark text-center">
                         {community.title}
                       </h2>
-                      <p className="text-xs md:text-sm text-gray-600 text-center leading-relaxed">
+                      <p className="text-xs md:text-sm text-abu text-center leading-relaxed">
                         {community.description}
                       </p>
 

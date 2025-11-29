@@ -89,7 +89,7 @@ const ContactSection = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Your Name *
+                    Nama *
                   </label>
                   <input
                     id="name"
@@ -142,7 +142,7 @@ const ContactSection = () => {
                   htmlFor="subject"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Subject *
+                  Telepon *
                 </label>
                 <input
                   id="subject"
@@ -169,7 +169,7 @@ const ContactSection = () => {
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Your Message *
+                  Pesan/Pertanyaan *
                 </label>
                 <textarea
                   id="message"
@@ -205,7 +205,7 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-8 py-2 bg-linear-to-r from-primary-dark to-secondary rounded-full text-base md:text-lg font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer mt-2"
+                className="inline-flex items-center justify-center px-8 py-2 bg-linear-to-r from-primary-dark to-secondary rounded-full text-base lg:text-lg font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer mt-2"
               >
                 Send Message
               </button>
@@ -273,7 +273,6 @@ const ContactSection = () => {
           </motion.aside>
         </div>
 
-        {/* Map embed di bawah */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
