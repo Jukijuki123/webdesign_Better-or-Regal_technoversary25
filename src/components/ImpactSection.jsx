@@ -47,14 +47,6 @@ const videos = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (index) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: index * 0.3, ease: "easeOut" },
-  }),
-};
 
 const ImpactSection = () => {
   return (
@@ -71,11 +63,6 @@ const ImpactSection = () => {
             {videos.map((video, index) => (
               <motion.article
                 key={video.id}
-                custom={index}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
                 className="bg-white p-4 w-72 relative rounded-2xl shrink-0 shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <a

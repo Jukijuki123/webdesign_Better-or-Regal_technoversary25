@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import logo from "../assets/img/logoEartLine.svg";
 
@@ -52,7 +51,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setMobileOpen(false);
+      if (window.innerWidth >= 1024) setMobileOpen(false);
     };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
@@ -73,7 +72,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex md:items-center md:space-x-8">
+          <nav className="hidden lg:flex md:items-center md:space-x-8">
             <a href="#tentang" className="nav-link text-hitam hover:text-primary-dark">Tentang Kami</a>
             <a href="#edukasi" className="nav-link text-hitam hover:text-primary-dark">Edukasi</a>
             <a href="#carakerja" className="nav-link text-hitam hover:text-primary-dark">Cara Kerja</a>
@@ -83,7 +82,7 @@ export default function Navbar() {
           </nav>
 
           {/* Tombol Humburger */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMobile}
               aria-label="Toggle navigation"
@@ -104,13 +103,13 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className='hidden md:block'>
+          <div className='hidden lg:block'>
           </div>
         </div>
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden transition-max-height duration-300 overflow-hidden ${mobileOpen ? 'max-h-[500px]' : 'max-h-0'}`}>
+      <div className={`lg:hidden transition-max-height duration-500 overflow-hidden ${mobileOpen ? 'max-h-[500px]' : 'max-h-0'}`}>
         <div
           className={`px-4 pb-6 pt-2 space-y-2 transition-colors duration-300 ${
             scrolled ? 'bg-primary-light shadow-md' : 'bg-white'

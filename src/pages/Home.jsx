@@ -5,15 +5,16 @@ import TentangSection from '../components/TentangSection'
 import imgGelombang from "../assets/img/gelombang.svg";
 import SumberSampah from '../components/SumberSampah';
 import TestimoniSection from '../components/Testimoni';
+import CommunitySection from '../components/KomunitasSection';
+import EducationSection from '../components/EdukasiSection';
+import ProdukKerajinan from '../components/Produk';
+import ImpactSection from '../components/ImpactSection';
+import ImpactStats from '../components/ImpactStats';
 import FaqSection from '../components/FaqSection';
 import TrashCashSection from '../components/TrashCashSection';
 import ContactSection from '../components/Kontak';
 import CaraKerja from '../components/CaraKerja';
 import Footer from '../components/Footer';
-import CommunitySection from '../components/KomunitasSection';
-import EducationSection from '../components/EdukasiSection';
-import ImpactSection from '../components/ImpactSection';
-import ImpactStats from '../components/ImpactStats';
 
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
             <SumberSampah />
             <EducationSection />
             <ImpactSection />
+            <ProdukKerajinan />
             <CaraKerja />
             <TrashCashSection />
             <TestimoniSection />

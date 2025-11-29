@@ -25,7 +25,7 @@ const CommunitySection = () => {
             >
               <span>Lihat Komunitas</span>
               <motion.span
-                className="ml-2 flex items-center opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                className="ml-2 flex items-center -translate-x-1 group-hover:translate-x-1 transition-all duration-200"
               >
                 <ArrowRight className="w-5 h-5" />
               </motion.span>

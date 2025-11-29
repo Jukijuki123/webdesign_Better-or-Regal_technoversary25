@@ -1,4 +1,5 @@
-# Better or Regal - SMK Negeri 26 Jakarta
+# Nama Tim: Better or Regal
+# Asal Instansi: SMK Negeri 26 Jakarta
 
 ##  Anggota Tim
 - Juki Sadikin
@@ -6,7 +7,7 @@
 - Raya Tsania
 
 ##  Judul Website
-EARTHLINE – Platform Pengelolaan Sampah Digital
+EARTHLINE – Platform Edukasi dan Pengelolaan Sampah Digital
 
 ##  Deskripsi
 Website ini membantu masyarakat dalam mengelola sampah secara efektif, 

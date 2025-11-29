@@ -98,11 +98,6 @@ const CommunityPage = () => {
               <div className="flex flex-nowrap justify-betwee gap-6 md:gap-8 min-w-max">
                 {communities.map((community, index) => (
                   <motion.div
-                    key={community.id}
-                    initial={{ opacity: 0}}
-                    whileInView={{ opacity: 1}}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                     className="bg-white rounded-3xl shadow-lg w-[360px] sm:w-[420px] md:w-[500px] shrink-0 overflow-hidden"
                   >
                     {/* gambar */}

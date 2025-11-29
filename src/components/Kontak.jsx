@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Mail,
   MapPin,
@@ -9,6 +9,8 @@ import {
   Facebook,
   Instagram,
   Twitter,
+  CheckCircle,
+  X,
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -20,12 +22,11 @@ const ContactSection = () => {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState({ type: "", message: "" });
+  const [popupOpen, setPopupOpen] = useState(false);
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
-    setStatus({ type: "", message: "" });
   };
 
   const validate = () => {
@@ -36,7 +37,7 @@ const ContactSection = () => {
     } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
       newErrors.email = "Format email tidak valid.";
     }
-    if (!form.subject.trim()) newErrors.subject = "Subjek wajib diisi.";
+    if (!form.subject.trim()) newErrors.subject = "Nomor telepon wajib diisi.";
     if (!form.message.trim()) newErrors.message = "Pesan tidak boleh kosong.";
 
     setErrors(newErrors);
@@ -47,27 +48,24 @@ const ContactSection = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    // Untuk sekarang, hanya simulasi kirim
     console.log("Form contact:", form);
 
-    setStatus({
-      type: "success",
-      message: "Pesan kamu sudah terkirim.",
-    });
+    // Reset form
     setForm({ name: "", email: "", subject: "", message: "" });
     if (formRef.current) formRef.current.reset();
+
+    setPopupOpen(true);
+
   };
 
   return (
     <section
       id="kontak"
-      className="bg-gray-50 py-16 px-6 md:px-10 lg:px-20 min-h-screen"
+      className="bg-gray-50 py-16 px-6 md:px-10 lg:px-20 min-h-screen relative"
     >
       <div className="max-w-6xl mx-auto">
-        
-
         <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)] items-start">
-          {/* Form kiri */}
+          {/* Letf */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -79,7 +77,8 @@ const ContactSection = () => {
               Hubungi Kami
             </h3>
             <p className="text-xs md:text-sm text-gray-500 mb-6">
-              Pelajari gimana sampah bisa punya nilai dan bantu bumi tetap bersih.
+              Pelajari gimana sampah bisa punya nilai dan bantu bumi tetap
+              bersih.
             </p>
 
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
@@ -127,12 +126,10 @@ const ContactSection = () => {
                         ? "border-red-500 focus:ring-red-400"
                         : "border-gray-200 focus:ring-primary-dark"
                     }`}
-                    placeholder="Masukkan Email Anda"
+                    placeholder="Masukkan email Anda"
                   />
                   {errors.email && (
-                    <p className="mt-1 text-xs text-red-500">
-                      {errors.email}
-                    </p>
+                    <p className="mt-1 text-xs text-red-500">{errors.email}</p>
                   )}
                 </div>
               </div>
@@ -158,9 +155,7 @@ const ContactSection = () => {
                   placeholder="Masukkan nomor Anda"
                 />
                 {errors.subject && (
-                  <p className="mt-1 text-xs text-red-500">
-                    {errors.subject}
-                  </p>
+                  <p className="mt-1 text-xs text-red-500">{errors.subject}</p>
                 )}
               </div>
 
@@ -185,37 +180,23 @@ const ContactSection = () => {
                   placeholder="Tulis pesanmu di sini..."
                 />
                 {errors.message && (
-                  <p className="mt-1 text-xs text-red-500">
-                    {errors.message}
-                  </p>
+                  <p className="mt-1 text-xs text-red-500">{errors.message}</p>
                 )}
               </div>
-
-              {status.message && (
-                <p
-                  className={`text-xs md:text-sm mt-1 ${
-                    status.type === "success"
-                      ? "text-emerald-600"
-                      : "text-red-500"
-                  }`}
-                >
-                  {status.message}
-                </p>
-              )}
 
               <button
                 type="submit"
                 className="inline-flex items-center justify-center px-8 py-2 bg-linear-to-r from-primary-dark to-secondary rounded-full text-base lg:text-lg font-semibold text-white hover:scale-105 transition duration-300 cursor-pointer mt-2"
               >
-                Send Message
+                Kirim Pesan
               </button>
             </form>
           </motion.div>
 
-
+          {/* Right */}
           <motion.aside
-            initial={{ opacity: 0}}
-            whileInView={{ opacity: 1}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
             className="relative flex justify-center lg:justify-end"
@@ -226,7 +207,9 @@ const ContactSection = () => {
                   <h3 className="text-lg font-semibold mb-1">Lokasi</h3>
                   <div className="flex items-start gap-3 text-sm">
                     <MapPin className="w-5 h-5 mt-1 text-lime-300" />
-                    <p>Bank Sampah Persatuan Jakarta, DKI Jakarta, Indonesia</p>
+                    <p>
+                      Bank Sampah Persatuan Jakarta, DKI Jakarta, Indonesia
+                    </p>
                   </div>
                 </div>
 
@@ -234,7 +217,7 @@ const ContactSection = () => {
                   <h3 className="text-lg font-semibold mb-1">Kontak</h3>
                   <div className="flex items-start gap-3 text-sm mb-1">
                     <Phone className="w-5 h-5 mt-0.5 text-lime-300" />
-                    <p>082399631182</p>
+                    <p>0823-9963-1182</p>
                   </div>
                   <div className="flex items-start gap-3 text-sm">
                     <Mail className="w-5 h-5 mt-0.5 text-lime-300" />
@@ -243,12 +226,12 @@ const ContactSection = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Jam Operasional</h3>
+                  <h3 className="text-lg font-semibold mb-1">
+                    Jam Operasional
+                  </h3>
                   <div className="flex items-start gap-3 text-sm">
                     <Clock className="w-5 h-5 mt-0.5 text-lime-300" />
-                    <p>
-                      Senin - Minggu: 08:00 WIB - 16:00 WIB
-                    </p>
+                    <p>Senin - Minggu: 08:00 WIB - 16:00 WIB</p>
                   </div>
                 </div>
               </div>
@@ -273,6 +256,7 @@ const ContactSection = () => {
           </motion.aside>
         </div>
 
+        {/* MAP */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -289,6 +273,47 @@ const ContactSection = () => {
           ></iframe>
         </motion.div>
       </div>
+
+      {/* Popup */}
+      <AnimatePresence>
+        {popupOpen && (
+          <motion.div
+            className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setPopupOpen(false)}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-2xl p-8 text-center max-w-sm w-[90%] relative"
+              initial={{ scale: 0.8, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold text-primary-dark mb-2">
+                Pesan Berhasil Dikirim!
+              </h4>
+              <p className="text-sm text-gray-600 mb-6">
+                Terima kasih sudah menghubungi kami. Kami akan membalas pesanmu
+                secepatnya 🌱
+              </p>
+              <button
+                onClick={() => setPopupOpen(false)}
+                className="px-6 py-2 bg-linear-to-r from-primary-dark to-secondary text-white font-semibold rounded-full hover:scale-105 transition"
+              >
+                Tutup
+              </button>
+              <X
+                onClick={() => setPopupOpen(false)}
+                className="absolute top-4 right-4 w-5 h-5 text-gray-400 cursor-pointer hover:text-gray-600"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
