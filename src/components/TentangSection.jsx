@@ -49,7 +49,7 @@ export default function TentangSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-xl font-semibold inline-block px-6 py-2 mb-6 rounded-3xl bg-primary-light text-[#084734]">
-            Kenali EarthLine
+            Kenali EARTHLINE
           </h2>
 
           <p className="text-lg mb-4">

@@ -48,7 +48,7 @@
     }
   }
 
-  /* kelas custom untuk track */
+
   .marquee {
     width: max-content;
     animation: marquee-slide 20s linear infinite;

@@ -100,7 +100,7 @@ const getBotResponse = (input) => {
         <button
             type="button"
             onClick={() => setIsOpen((v) => !v)}
-            className="fixed bottom-6 right-6 bg-primary-dark text-white p-4 rounded-full shadow-lg hover:bg-primary transition z-40"
+            className="fixed bottom-6 right-6 bg-primary-dark text-white p-4 rounded-full shadow-lg hover:bg-primary cursor-pointer transition z-40"
             aria-label="Buka chatbot"
         >
             <MessageCircle className="w-6 h-6" />
@@ -118,7 +118,7 @@ const getBotResponse = (input) => {
                 <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:text-gray-200"
+                className="text-white hover:text-gray-200 cursor-pointer"
                 aria-label="Tutup chatbot"
                 >
                 <X className="w-4 h-4" />
@@ -155,7 +155,7 @@ const getBotResponse = (input) => {
                 <button
                 type="button"
                 onClick={handleSend}
-                className="bg-primary-dark text-white px-3 py-2 rounded-lg hover:bg-primary flex items-center justify-center"
+                className="bg-primary-dark text-white px-3 py-2 rounded-lg hover:bg-primary flex items-center justify-center cursor-pointer"
                 >
                 <Send className="w-4 h-4" />
                 </button>

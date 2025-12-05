@@ -237,7 +237,7 @@ const ContactSection = () => {
               </div>
 
               <div className="mt-6">
-                <p className="text-sm font-medium mb-2">Stay Connected</p>
+                <p className="text-sm font-medium mb-2">Sosial Media</p>
                 <div className="flex gap-3">
                   {[Facebook, Instagram, Twitter].map((Icon, idx) => (
                     <motion.a

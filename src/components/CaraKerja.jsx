@@ -93,7 +93,7 @@ const CaraKerjaSection = () => {
                     {step.title}
                   </h3>
 
-                  <p className="text-sm text-gray-600 leading-relaxed max-w-[260px] min-h-[150px]">
+                  <p className="text-sm text-abu leading-relaxed max-w-[260px] min-h-[150px]">
                     {step.desc}
                   </p>
                 </motion.div>

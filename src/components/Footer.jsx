@@ -43,7 +43,7 @@ const Footer = () => {
               {[Dribbble, Github, Twitter, Facebook].map((Icon, i) => (
                 <motion.a
                   key={i}
-                  href="#"
+                  href="https://github.com/Jukijuki123/webdesign_Better-or-Regal_technoversary25"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-9 h-9 rounded-full border border-white/60 flex items-center justify-center text-white"
@@ -101,18 +101,18 @@ const Footer = () => {
               <h3 className="font-semibold mb-2">Sosial Media</h3>
               <ul className="space-y-1 text-gray-100">
                 <li>
-                  <a href="#" className="hover:underline">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
+                  <a href="https://www.instagram.com/" className="hover:underline" target="_blank">
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="https://www.facebook.com/?locale=id_ID" className="hover:underline" target="_blank">
                     Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/id-ID/" className="hover:underline" target="_blank">
+                    TikTok
                   </a>
                 </li>
               </ul>
@@ -126,7 +126,7 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-3 items-start text-sm md:text-base">
 
           <div className="space-y-3">
-            <h3 className="font-semibold">Get the app</h3>
+            <h3 className="font-semibold">Dapatkan Aplikasi</h3>
             <div className="flex flex-wrap gap-3">
               <motion.a
                 whileHover={{ scale: 1.03, y: -1 }}

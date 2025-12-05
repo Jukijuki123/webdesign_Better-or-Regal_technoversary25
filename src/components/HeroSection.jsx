@@ -37,7 +37,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="text-base md:text-lg text-abu mb-6">
-          EarthLine dibuat untuk mempermudah masyarakat dalam mengelola sampah
+          EARTHLINE dibuat untuk mempermudah masyarakat dalam mengelola sampah
           secara efektif dan bertanggung jawab serta mengubah sampah menjadi
           sumber manfaat melalui pengelolaan yang tepat.
         </p>

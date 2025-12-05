@@ -3,7 +3,6 @@ import Home from './pages/Home'
 import TrashCash from './pages/TrashCash'
 import CommunityPage from './pages/Community'
 
-
 function App() {
 
   return (
